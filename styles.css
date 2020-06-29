@@ -28,7 +28,12 @@ h1{
     padding: 5px;
     font-size: 25px;
 }
-.button{
+.number,
+.operator,
+.clear,
+.reset,
+.equal,
+.cancel{
     height: 55px;
     width: 55px;
     font-size: 25px;
@@ -36,4 +41,16 @@ h1{
     cursor: pointer;
     color: cadetblue;
     font-weight: bold;
+}
+
+.operator{
+    color: dodgerblue;
+}
+.reset{
+    background-color: red;
+    color: white;
+}
+.equal{
+    background-color: dodgerblue;
+    color: white;
 }

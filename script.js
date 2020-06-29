@@ -1,7 +1,38 @@
-let input = document.querySelector('.input');
+const input = document.querySelector('.input');
+const cancel = document.querySelector('.cancel');
+const equal = document.querySelector('.equal');
+const reset = document.querySelector('.reset');
+const numbers = [
+    document.querySelector('.one'),
+    document.querySelector('.two'),
+    document.querySelector('.three'),
+    document.querySelector('.four'),
+    document.querySelector('.five'),
+    document.querySelector('.six'),
+    document.querySelector('.seven'),
+    document.querySelector('.eight'),
+    document.querySelector('.nine')
+];
+const operators = [
+    document.querySelector('.plus'),
+    document.querySelector('.minus'),
+    document.querySelector('.divd'),
+    document.querySelector('.mult'),
+];
 
-const insert = (value) => input.value += value;
+const cancelLast = () => input.value = input.value.slice(0, -1);
+const clearInput = () => input.value ='';
+const calcResult = () => input.value = eval(input.value);
+const insertNum = (num) => input.value = input.value + num;
 
-const clearInput = () => input.value = '';
+numbers.forEach( (el) => el.addEventListener('click', () => insertNum(el.value)));
+operators.forEach( (el) => el.addEventListener('click', () => insertNum(el.value)));
 
-const calc = () => input.value = eval(input.value);
+cancel.addEventListener('click', cancelLast);
+reset.addEventListener('click', clearInput);
+equal.addEventListener('click', calcResult);
+
+
+
+
+
