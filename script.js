@@ -3,6 +3,7 @@ const cancel = document.querySelector('.cancel');
 const equal = document.querySelector('.equal');
 const reset = document.querySelector('.reset');
 const numbers = [
+    document.querySelector('.zero'),
     document.querySelector('.one'),
     document.querySelector('.two'),
     document.querySelector('.three'),
@@ -11,7 +12,8 @@ const numbers = [
     document.querySelector('.six'),
     document.querySelector('.seven'),
     document.querySelector('.eight'),
-    document.querySelector('.nine')
+    document.querySelector('.nine'),
+    document.querySelector('.decimal')
 ];
 const operators = [
     document.querySelector('.plus'),
@@ -31,6 +33,7 @@ operators.forEach( (el) => el.addEventListener('click', () => insertNum(el.value
 cancel.addEventListener('click', cancelLast);
 reset.addEventListener('click', clearInput);
 equal.addEventListener('click', calcResult);
+
 
 
 
